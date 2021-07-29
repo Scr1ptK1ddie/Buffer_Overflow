@@ -169,7 +169,7 @@ buffer = '\x41'*524 + '\x42'*4 + '\x43'*(1600-524-4)
 
 ### 4. Bad Characters
 
-Now that we know we can control the ESP and made room for our shellcode, we need to remove the possibility of any bad characters. What will happen is if a bad character is read in memory, everything found after the fact will get cut off and effectively not run. Your google fu for bad characters in buffer overflows will likely yield a reference to https://bulbsecurity.com/finding-bad-characters-with-immunity-debugger-and-mona-py/ which will provide you a list of all bad characters.
+Now that we know we can control the ESP and made room for our shellcode, we need to remove the possibility of any bad characters. What will happen is if a bad character is read in memory, everything found after the fact will get cut off and effectively not run. List of all bad characters below. 
 
 ~~~Python
 #!/usr/bin/python 
